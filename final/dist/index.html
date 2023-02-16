@@ -1,0 +1,163 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MjiHub</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,300&display=swap" rel="stylesheet">
+    <link
+      href="./material-components-web.min.css"
+      rel="stylesheet"
+    /> 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script defer src="bundle.js"></script>
+    <script src="./material-components-web.min.js"></script>
+  </head>
+  <body> 
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <a
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" href="index.html"
+        >
+          <span class="mdc-top-app-bar__title">MjiHub</span>
+        </a>
+        <section
+          class="isLogIn-toolbar mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+        <span class="current-user"></span>
+          <button
+            class="addBtn material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Search"
+          >
+            add
+          </button>
+          <button
+            class="logoutBtn material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Search"
+          >
+            logout
+          </button>
+        </section>
+      </div>
+    </header>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+      <section class="isLogIn-home">
+        
+        <div class="city-item-container">
+        </div>
+               
+
+        <!-- Dialog()-->
+        <div class="mdc-dialog">
+          <div class="mdc-dialog__container">
+            <form class="set-city mdc-dialog__surface"
+              role="alertdialog"
+              aria-modal="true"
+              aria-labelledby="my-dialog-title"
+              aria-describedby="my-dialog-content">
+              <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+              <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+             -->Ajouter une ville<!--
+           --></h2>
+              <div class="image-section">
+                  <h1 align="center" class="img-progress-indicator">Changement de l'image...<h1/>
+                  <img class="image-preview" alt="image preview" height="200px" width="100%" style="object-fit:cover"/>
+                  <input type="file" class="image-input" accept=".png,.jpg,.jpeg"/>
+              </div>
+
+              <div class="dialog-content mdc-dialog__content" id="my-dialog-content">
+
+                <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input placeholder="Le pays" type="text" name="pays" class="mdc-text-field__input" required>
+                </label>
+
+                <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input placeholder="La ville" type="text" name="ville" class="mdc-text-field__input" required>
+                </label>
+
+                <label class="max-with mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <select name="capital" id="capital" class="mdc-text-field__input" required>
+                    <option value="true">Est la capitale</option>
+                    <option value="false">N'est pas la capitale</option>
+                  </select>
+                </label>
+
+                <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label population-update-field">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input placeholder="La population" type="text" name="population" class="mdc-text-field__input" required>
+                </label>
+            
+              </div>
+
+              <div class="mdc-dialog__actions">
+                <button type="button" class="cancel-btn mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                  <div class="mdc-button__ripple"></div>
+                  <span class="mdc-button__label">Annuler</span>
+                </button>
+                <button type="submit" class="submit-btn mdc-button mdc-dialog__button">
+                  <div class="mdc-button__ripple"></div>
+                  <span class="mdc-button__label">Ajouter</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+          <div class="mdc-dialog__scrim"></div>
+        </div>
+      </section>
+
+      <section class="isLogOut mdc-card mdc-card--outlined"">
+        <div class="card-container mdc-card__primary-action">
+          <h3 >Connectez-vous</h3>
+
+          <form class="passwordless">
+            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <input placeholder="Votre email" type="email" name="email" class="mdc-text-field__input" required>
+            </label>
+            <button class="mdc-button mdc-button--raised">
+              <span class="mdc-button__label">Connectez-vous sans mot de passe</span>
+            </button>
+          </form>
+
+          <p align="center">-------------- OU -----------------</p>
+
+          <button class="googleLogin mdc-button mdc-button--outlined mdc-button--icon-leading">
+            <span class="mdc-button__ripple"></span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">login</i>
+            <span class="mdc-button__label">Connectez-vous avec Google</span>
+          </button>
+
+          <br/>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>

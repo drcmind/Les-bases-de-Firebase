@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+    <script defer src="./bundle.js"></script>
+  </head>
+  <body>
+    <h1>Les bases de Firebase</h1>
+
+    <form class="ajouter">
+      <label for="pays">Pays: </label>
+      <input type="text" name="pays" required /><br />
+      <label for="ville">Ville: </label>
+      <input type="text" name="ville" required />
+      <select name="capital" id="capital">
+        <option value="true">Est la capitale</option>
+        <option value="false">N'est pas la capitale</option>
+      </select>
+      <button>Nouvelle ville</button>
+    </form>
+
+    <form class="suppression">
+      <label for="id">ID du document à supprimer:</label>
+      <input type="text" name="id" required />
+      <button>supprimer cette ville</button>
+    </form>
+
+    <form class="update">
+      <label for="id">ID du document à mettre à jour:</label>
+      <input type="text" name="id" required />
+      <button>Mettre à jour</button>
+    </form>
+
+    <h1>Authentification</h1>
+    <h3>
+      Connexion avec Google
+      <button class="googleLogin">Se connecter avec Google</button>
+    </h3>
+
+    <h3>Authentification sans password</h3>
+    <form class="passwordless">
+      <label for="email">email:</label>
+      <input type="email" name="email" />
+      <button>Connectez-vous</button>
+    </form>
+
+    <h3>
+      Lier avec Google <button class="linkAccount">Lier le compte</button>
+    </h3>
+
+    <button class="logout">Déconnexion</button>
+  </body>
+</html>

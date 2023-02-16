@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MjiHub Detail</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./material-components-web.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script defer src="bundle.js"></script>
+    <script src="./material-components-web.min.js"></script>
+  </head>
+  <body>
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <a
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+          href="index.html"
+        >
+          <span class="mdc-top-app-bar__title">MjiHub</span>
+        </a>
+        <section
+          class="isLogIn-toolbar mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+          role="toolbar"
+        >
+          <span class="current-user"></span>
+          <button
+            class="logoutBtn material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Search"
+          >
+            logout
+          </button>
+        </section>
+      </div>
+    </header>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+      <div class="isLogOut"></div>
+      <section class="detail-city-container isLogIn-home">
+        <div
+          class="city-card city-card-detail mdc-card mdc-card--outlined"
+        ></div>
+
+        <form class="set-city mdc-card mdc-card--outlined modification-form">
+          <p>Modifier cette ville</p>
+          <div class="dialog-content">
+            <div class="image-section img-section-detail">
+              <h1 align="center" class="img-progress-indicator">Changement de l'image...<h1/>
+              <img class="image-preview" alt="image preview" height="200px" width="100%" style="object-fit:cover"/>
+              <input type="file" class="image-input" accept=".png,.jpg,.jpeg"/>
+          </div>
+
+            <label
+              class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+            >
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <input
+                placeholder="Le pays"
+                type="text"
+                name="pays"
+                class="mdc-text-field__input"
+                required
+              />
+            </label>
+
+            <label
+              class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+            >
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <input
+                placeholder="La ville"
+                type="text"
+                name="ville"
+                class="mdc-text-field__input"
+                required
+              />
+            </label>
+
+            <label
+              class="max-with mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+            >
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <select
+                name="capital"
+                id="capital"
+                class="mdc-text-field__input"
+                required
+              >
+                <option value="true">Est la capitale</option>
+                <option value="false">N'est pas la capitale</option>
+              </select>
+            </label>
+
+            <label
+              class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label"
+            >
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <input
+                placeholder="La population"
+                type="text"
+                name="population"
+                class="mdc-text-field__input"
+                required
+              />
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="edit-btn submit-btn mdc-button mdc-button--outlined"
+          >
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">Modifier la ville</span>
+          </button>
+        </form>
+      </section>
+      <hr />
+      <h1 class="more-city-title">Voir aussi:</h1>
+      <div class="city-item-container"></div>
+    </main>
+  </body>
+</html>

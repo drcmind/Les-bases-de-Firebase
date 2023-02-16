@@ -1,0 +1,119 @@
+body, html{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mdc-top-app-bar__section {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mdc-card{
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.card-container {
+    margin: 0 1rem
+}
+
+.passwordless > * {
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+.dialog-content  {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 15rem;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.dialog-content  > * {
+    flex-basis: 49.5%;
+    margin-top: 0.4rem;
+}
+
+.city-item-container {
+    width: 75rem;
+    columns: 4;
+    column-gap: 1rem;
+    margin: 1rem auto;
+}
+
+.city-card {
+    margin: 0;
+    height: max-content;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    break-inside: avoid;
+    transition: transform 250ms ease-in-out;
+    animation: fade 1s ease forwards; 
+    text-decoration:none;
+}
+
+.city-card:hover {
+    transform: scale(1.02);
+}
+
+.city-card > * {
+    margin : 0.2rem .5rem;
+    font-size: clamp(0.1rem, 5vw, 1rem);
+    text-decoration:none;
+    color: black;
+}
+
+.city-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.detail-city-container {
+    width: max-content;
+    margin: 1rem auto;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.modification-form {
+    padding: 1rem;
+    margin: 0;
+}
+
+.edit-btn {
+    margin-top: 1rem;
+}
+
+.more-city-title, hr {
+    width: 75rem;
+    margin: 1rem auto;
+    margin-top: 2rem;
+}
+
+.city-card-detail{
+    padding: 1rem;
+    width:max-content;
+}
+
+.img-section-detail{
+    flex-basis: 100%;
+}
+
+.image-input {
+    display: block;
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+    background-color: bisque;
+    font-family: inherit;
+}
+
+.image-thubnail{
+    width: inherit;
+    background: gray;
+    height: 200px;
+    object-fit: cover
+}
